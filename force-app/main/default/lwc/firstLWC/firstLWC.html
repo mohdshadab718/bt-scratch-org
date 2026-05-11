@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account Merge">
+        <hr>
+        <div class="slds-p-around_large" style="min-width:15rem;">
+            <lightning-input class="accNo" name="accountNo" type="text" label="Master Account No" value="" onchange={updateName}></lightning-input>
+            <br>
+            <lightning-button variant="brand" onclick={hanldeClick} label="Merge" title="Account Merge With Temp Account"></lightning-button>
+            <lightning-button class="slds-m-left_x-small" variant="Neutral" label="Clear" title="Clear" onclick={clearAccField}></lightning-button>
+        </div>
+        <p slot="footer">Hi {accountNo}, Welcome Chutiye </p>
+    </lightning-card>
+</template>
