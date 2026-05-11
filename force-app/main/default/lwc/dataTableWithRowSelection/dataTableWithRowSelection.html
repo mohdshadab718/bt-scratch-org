@@ -1,0 +1,20 @@
+<template>
+
+    <!-- LWC Search input box -->
+    <div class="slds-p-around_small" style="background-color: rgba(255, 255, 255, 1);">
+        <h2 class="slds-text-heading_small">LWC DataTable with row selection</h2>
+        <lightning-input class="myInput" type="search" placeholder="Enter Contact Name" value={searchKey}
+            onchange={handleSearch}>
+        </lightning-input>
+        <!-- LWC DataTable -->
+        <template lwc:if={showTable}>
+            <lightning-datatable class="slds-text-title" key-field="id" data={data} columns={columns}
+                onrowaction={handleRowActtion}>
+            </lightning-datatable>
+        </template>
+        <template lwc:else>
+            <br> 
+            <p>Oops! No Related Contact Found.</p>
+        </template>
+    </div>
+</template>
